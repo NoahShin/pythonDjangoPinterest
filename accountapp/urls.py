@@ -4,6 +4,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from accountapp.views import AccountCreateView, AccountDeleteView, AccountDetailView, AccountUpdateView, hello_world
 =======
 from accountapp.views import AccountCreateView, AccountDetailView, AccountUpdateView, hello_world
@@ -14,6 +15,9 @@ from accountapp.views import AccountCreateView, AccountDeleteView, AccountDetail
 =======
 from accountapp.views import AccountCreateView, AccountDeleteView, AccountDetailView, AccountUpdateView, hello_world
 >>>>>>> 2765aab (delete View and bug fix)
+=======
+from accountapp.views import AccountCreateView, AccountDeleteView, AccountDetailView, AccountUpdateView, hello_world
+>>>>>>> 43b223aeda573772788f425f29f2ef48aad8db19
 
 app_name = 'accountapp'
 
@@ -27,6 +31,7 @@ urlpatterns = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     path('delete/<int:pk>', AccountDeleteView.as_view(), name='delete'),
 =======
 >>>>>>> 9974e96 (updateView)
@@ -36,4 +41,7 @@ urlpatterns = [
 =======
     path('delete/<int:pk>', AccountDeleteView.as_view(), name='delete'),
 >>>>>>> 2765aab (delete View and bug fix)
+=======
+    path('delete/<int:pk>', AccountDeleteView.as_view(), name='delete'),
+>>>>>>> 43b223aeda573772788f425f29f2ef48aad8db19
 ]

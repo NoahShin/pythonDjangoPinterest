@@ -4,6 +4,7 @@ from django.urls import reverse, reverse_lazy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
 =======
 from django.views.generic import CreateView, DetailView, UpdateView
@@ -14,6 +15,9 @@ from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
 =======
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
 >>>>>>> 2765aab (delete View and bug fix)
+=======
+from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
+>>>>>>> 43b223aeda573772788f425f29f2ef48aad8db19
 from accountapp.forms import AccountUpdateForm
 from accountapp.models import HelloWorld
 from django.contrib.auth.models import User
@@ -53,6 +57,9 @@ class AccountUpdateView(UpdateView):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 43b223aeda573772788f425f29f2ef48aad8db19
   context_object_name = 'target_user'
   form_class = AccountUpdateForm
   success_url = reverse_lazy('accountapp:hello_world')
@@ -64,7 +71,11 @@ class AccountUpdateView(UpdateView):
 =======
 >>>>>>> 075e965 (authentication)
 =======
+<<<<<<< HEAD
 >>>>>>> 075e965 (authentication)
+=======
+>>>>>>> 856af77556c58b5e4dc0501c2972144c7d44fb32
+>>>>>>> 43b223aeda573772788f425f29f2ef48aad8db19
   def get(self, *args, **kwargs):
     if self.request.user.is_authenticated and self.get_object() == self.request.user:
       return super().get(*args, **kwargs)
@@ -83,7 +94,11 @@ class AccountUpdateView(UpdateView):
 =======
 >>>>>>> 075e965 (authentication)
 =======
+<<<<<<< HEAD
 >>>>>>> 075e965 (authentication)
+=======
+>>>>>>> 856af77556c58b5e4dc0501c2972144c7d44fb32
+>>>>>>> 43b223aeda573772788f425f29f2ef48aad8db19
 class AccountDeleteView(DeleteView):
   model = User
   context_object_name = 'target_user'
@@ -94,7 +109,11 @@ class AccountDeleteView(DeleteView):
 =======
 >>>>>>> 075e965 (authentication)
 =======
+<<<<<<< HEAD
 >>>>>>> 075e965 (authentication)
+=======
+>>>>>>> 856af77556c58b5e4dc0501c2972144c7d44fb32
+>>>>>>> 43b223aeda573772788f425f29f2ef48aad8db19
   template_name = 'accountapp/delete.html'
 
   def get(self, *args, **kwargs):
@@ -117,6 +136,7 @@ class AccountDeleteView(DeleteView):
       return HttpResponseForbidden()
 >>>>>>> 075e965 (authentication)
 =======
+<<<<<<< HEAD
   form_class = AccountUpdateForm
   success_url = reverse_lazy('accountapp:hello_world')
   template_name = 'accountapp/update.html'
@@ -173,3 +193,7 @@ class AccountDeleteView(DeleteView):
 =======
       return HttpResponseForbidden()
 >>>>>>> 075e965 (authentication)
+=======
+      return HttpResponseForbidden()
+>>>>>>> 856af77556c58b5e4dc0501c2972144c7d44fb32
+>>>>>>> 43b223aeda573772788f425f29f2ef48aad8db19
