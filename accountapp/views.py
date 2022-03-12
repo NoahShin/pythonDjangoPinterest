@@ -43,6 +43,7 @@ class AccountUpdateView(UpdateView):
   success_url = reverse_lazy('accountapp:hello_world')
   template_name = 'accountapp/update.html'
 
+<<<<<<< HEAD
   def get(self, *args, **kwargs):
     if self.request.user.is_authenticated and self.get_object() == self.request.user:
       return super().get(*args, **kwargs)
@@ -54,10 +55,13 @@ class AccountUpdateView(UpdateView):
       return super().get(*args, **kwargs)
     else:
       return HttpResponseForbidden()
+=======
+>>>>>>> 2765aab (delete View and bug fix)
 class AccountDeleteView(DeleteView):
   model = User
   context_object_name = 'target_user'
   success_url = reverse_lazy('accountapp:login')
+<<<<<<< HEAD
   template_name = 'accountapp/delete.html'
 
   def get(self, *args, **kwargs):
@@ -71,3 +75,6 @@ class AccountDeleteView(DeleteView):
       return super().get(*args, **kwargs)
     else:
       return HttpResponseForbidden()
+=======
+  template_name = 'accountapp/delete.html'
+>>>>>>> 2765aab (delete View and bug fix)
