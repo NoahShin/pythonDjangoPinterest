@@ -9,7 +9,11 @@
     <div class="mb-4">
       <h1>Change Fuxing Info</h1>
     </div>
+<<<<<<< HEAD
     <form action="{% url 'accountapp:update' pk=target_user.pk %}" method="post">
+=======
+    <form action="{% url 'accountapp:update' pk=user.pk %}" method="post">
+>>>>>>> 9974e96 (updateView)
       {% csrf_token %}
       {% bootstrap_form form %}
       <input type="submit" class="btn btn-dark rounded-pill col-6 mt-3">
