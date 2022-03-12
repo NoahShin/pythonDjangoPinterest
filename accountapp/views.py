@@ -2,10 +2,14 @@ from django.http import HttpResponse, HttpResponseForbidden, HttpResponseRedirec
 from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
 <<<<<<< HEAD
+<<<<<<< HEAD
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
 =======
 from django.views.generic import CreateView, DetailView, UpdateView
 >>>>>>> 9974e96 (updateView)
+=======
+from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
+>>>>>>> ab30486 (delete View and bug fix)
 from accountapp.forms import AccountUpdateForm
 from accountapp.models import HelloWorld
 from django.contrib.auth.models import User
@@ -42,6 +46,7 @@ class AccountDetailView(DetailView):
 
 class AccountUpdateView(UpdateView):
   model = User
+<<<<<<< HEAD
 <<<<<<< HEAD
   context_object_name = 'target_user'
   form_class = AccountUpdateForm
@@ -101,3 +106,15 @@ class AccountDeleteView(DeleteView):
   success_url = reverse_lazy('accountapp:hello_world')
   template_name = 'accountapp/update.html'
 >>>>>>> 9974e96 (updateView)
+=======
+  context_object_name = 'target_user'
+  form_class = AccountUpdateForm
+  success_url = reverse_lazy('accountapp:hello_world')
+  template_name = 'accountapp/update.html'
+
+class AccountDeleteView(DeleteView):
+  model = User
+  context_object_name = 'target_user'
+  success_url = reverse_lazy('accountapp:login')
+  template_name = 'accountapp/delete.html'
+>>>>>>> ab30486 (delete View and bug fix)

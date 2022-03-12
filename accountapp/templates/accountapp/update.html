@@ -10,10 +10,14 @@
       <h1>Change Fuxing Info</h1>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <form action="{% url 'accountapp:update' pk=target_user.pk %}" method="post">
 =======
     <form action="{% url 'accountapp:update' pk=user.pk %}" method="post">
 >>>>>>> 9974e96 (updateView)
+=======
+    <form action="{% url 'accountapp:update' pk=target_user.pk %}" method="post">
+>>>>>>> ab30486 (delete View and bug fix)
       {% csrf_token %}
       {% bootstrap_form form %}
       <input type="submit" class="btn btn-dark rounded-pill col-6 mt-3">
