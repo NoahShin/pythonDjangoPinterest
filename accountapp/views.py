@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
 =======
 from django.views.generic import CreateView, DetailView, UpdateView
@@ -10,6 +11,9 @@ from django.views.generic import CreateView, DetailView, UpdateView
 =======
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
 >>>>>>> ab30486 (delete View and bug fix)
+=======
+from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
+>>>>>>> 2765aab (delete View and bug fix)
 from accountapp.forms import AccountUpdateForm
 from accountapp.models import HelloWorld
 from django.contrib.auth.models import User
@@ -48,6 +52,7 @@ class AccountUpdateView(UpdateView):
   model = User
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   context_object_name = 'target_user'
   form_class = AccountUpdateForm
   success_url = reverse_lazy('accountapp:hello_world')
@@ -123,10 +128,18 @@ class AccountDeleteView(DeleteView):
       return super().get(*args, **kwargs)
     else:
       return HttpResponseForbidden()
+=======
+  context_object_name = 'target_user'
+  form_class = AccountUpdateForm
+  success_url = reverse_lazy('accountapp:hello_world')
+  template_name = 'accountapp/update.html'
+
+>>>>>>> 2765aab (delete View and bug fix)
 class AccountDeleteView(DeleteView):
   model = User
   context_object_name = 'target_user'
   success_url = reverse_lazy('accountapp:login')
+<<<<<<< HEAD
   template_name = 'accountapp/delete.html'
 <<<<<<< HEAD
 >>>>>>> ab30486 (delete View and bug fix)
@@ -144,3 +157,6 @@ class AccountDeleteView(DeleteView):
     else:
       return HttpResponseForbidden()
 >>>>>>> 34daaf7 (authentication)
+=======
+  template_name = 'accountapp/delete.html'
+>>>>>>> 2765aab (delete View and bug fix)
