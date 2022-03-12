@@ -44,6 +44,9 @@ class AccountUpdateView(UpdateView):
   template_name = 'accountapp/update.html'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 075e965 (authentication)
   def get(self, *args, **kwargs):
     if self.request.user.is_authenticated and self.get_object() == self.request.user:
       return super().get(*args, **kwargs)
@@ -55,13 +58,19 @@ class AccountUpdateView(UpdateView):
       return super().get(*args, **kwargs)
     else:
       return HttpResponseForbidden()
+<<<<<<< HEAD
 =======
 >>>>>>> 2765aab (delete View and bug fix)
+=======
+>>>>>>> 075e965 (authentication)
 class AccountDeleteView(DeleteView):
   model = User
   context_object_name = 'target_user'
   success_url = reverse_lazy('accountapp:login')
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 075e965 (authentication)
   template_name = 'accountapp/delete.html'
 
   def get(self, *args, **kwargs):
@@ -74,7 +83,11 @@ class AccountDeleteView(DeleteView):
     if self.request.user.is_authenticated and self.get_object() == self.request.user:
       return super().get(*args, **kwargs)
     else:
+<<<<<<< HEAD
       return HttpResponseForbidden()
 =======
   template_name = 'accountapp/delete.html'
 >>>>>>> 2765aab (delete View and bug fix)
+=======
+      return HttpResponseForbidden()
+>>>>>>> 075e965 (authentication)
