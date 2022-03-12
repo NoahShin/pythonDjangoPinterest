@@ -1,5 +1,7 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def hello_world(request):
-    return HttpResponse('Hello World! 안녕 홍지현 ?!')
+    return render(request, 'base.html')
+
